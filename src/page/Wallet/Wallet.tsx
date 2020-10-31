@@ -7,11 +7,11 @@ import { ReactComponent as EditIcon } from '../../assets/svg/edit-icon.svg'
 import { ReactComponent as VisaFlag } from '../../assets/svg/visa-flag.svg'
 import { ReactComponent as MasterFlag } from '../../assets/svg/master-flag.svg'
 
-const Profile = () => {
+const Wallet = () => {
     return (
-        <div className="profile">
-            <div className="profile__background">
-                <BackgroundImage className="profile__image" />
+        <div className="wallet">
+            <div className="wallet__background">
+                <BackgroundImage className="wallet__image" />
             </div>
 
             <div className="top-bar">
@@ -74,4 +74,4 @@ const Profile = () => {
     );
 }
 
-export { Profile }
+export { Wallet }
