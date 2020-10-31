@@ -97,6 +97,31 @@
         color: transparentize($color-black, 0.5);
         font-size: 12px;
         text-align: left;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__add-new{
+        padding-left: 20px;
+        position: relative;
+        background: transparent;
+        border: none;
+        color: inherit;
+        
+        &:after,&:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 12px;
+            height: 1px;
+            border-radius: 2px;
+            background: $color-black-w-50-opacity;
+            transform: translateY(-50%);
+        }
+        &:before{
+            transform: translateY(-50%) rotate(90deg);
+        }
     }
 
     &__cards{

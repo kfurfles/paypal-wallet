@@ -44,7 +44,10 @@ const Profile = () => {
             </div>
             
             <div className="credit-cards">
-                <div className="credit-cards__title">My banking cards</div>
+                <div className="credit-cards__title">
+                    My banking cards
+                    <button className="credit-cards__add-new">Add</button>
+                </div>
 
                 <div className="credit-cards__cards">
                     <div className="brand">
