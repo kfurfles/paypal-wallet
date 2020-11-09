@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const SvgLogo = styled(PayPalLogo)`
-    margin-top: 100px
+    margin-top: 100px;
 `
 
 const InputBase = styled(Input)`
@@ -20,15 +20,15 @@ const InputBase = styled(Input)`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    min-width: 260px
+    min-width: 260px;
 `
 
 export const InputEmail = styled(InputBase)`
-    margin-top: 98px
+    margin-top: 98px;
 `
 
 export const InputPassword = styled(InputBase)`
-    margin-top: 16px
+    margin-top: 16px;
 `
 
 export const LoginButton = styled(Button)`

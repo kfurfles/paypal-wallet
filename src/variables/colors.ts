@@ -1,7 +1,7 @@
 export const PRIMARY = '#0070BA';
 export const PRIMARY_SHADE = '#005EA6';
 export const PRIMARY_DARK = '#1546A0';
-export const GRAY = '#F5F7FA';
+export const GRAY = '#E6E6E6' || '#F5F7FA';
 export const WHITE = '#FFFFFF';
 export const BLACK = '#243656';
 export const BLACKGROUND_GRADIENT = 'radial-gradient(122.27% 198.92% at -22.27% -27.38%, #0070BA 0%, #1546A0 100%)'

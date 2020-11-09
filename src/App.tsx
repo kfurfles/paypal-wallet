@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 // import Profile from './page/Profile'
 // import Login from './page/Login'
-import Activity from './page/Activity'
+import Activitys from './page/Activitys'
 
 function App() {
   return (
     <div className="App">
       {/* <Profile /> */}
       {/* <Login /> */}
-      <Activity />
+      <Activitys />
     </div>
   );
 }
