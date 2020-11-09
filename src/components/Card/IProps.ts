@@ -1,4 +1,4 @@
-import { BaseHTMLAttributes, ReactNode } from "react";
+import React from "react";
 
 export interface IProps {
     image: React.ReactNode,

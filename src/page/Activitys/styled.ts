@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { IActivityItem } from './IProps'
+import { IActivityItem } from './IProps';
 import * as COLOR from '../../variables/colors';
 
-import Card from '../../components/Card'
+import Card from '../../components/Card';
+import Input from '../../components/Input';
 
 export const IconButton = styled.button`
     svg{
@@ -47,6 +48,32 @@ export const LabelItem = styled.label`
     font-size: 16px;
     padding: 11px 24px;
     border-radius: 10px;
+
+    &:nth-of-type(3) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+`
+
+export const InputBox = styled.div`
+    position: relative;
+    margin-top: 20px;
+
+    svg {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+    }
+`
+
+export const InputSearch = styled(Input)`
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    border-radius: 15px;
 `
 
 export const ActivityBlock = styled.div`
