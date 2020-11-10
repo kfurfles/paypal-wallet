@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import { IActivityItem } from './IProps';
 import * as COLOR from '../../variables/colors';
 
@@ -48,6 +48,7 @@ export const LabelItem = styled.label`
     font-size: 16px;
     padding: 11px 24px;
     border-radius: 10px;
+    cursor: pointer;
 
     &:nth-of-type(3) {
         text-overflow: ellipsis;

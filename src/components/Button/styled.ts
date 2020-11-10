@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import * as COLOR from './../../variables/colors'
 
 import { ButtonProps } from './IProps'

@@ -8,8 +8,8 @@ import Activitys from './page/Activitys'
 function App() {
   return (
     <div className="App">
-      <Wallet />
-      {/* <Profile /> */}
+      {/* <Wallet /> */}
+      <Profile />
       {/* <Login /> */}
       {/* <Activitys /> */}
     </div>

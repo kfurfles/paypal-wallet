@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './style';
+import { Container } from './styled';
 
 import { ReactComponent as PayPalIcon } from './../../assets/svg/paypal-icon.svg'
 import { ReactComponent as BackgroundImage } from '../../assets/svg/shape-profile.svg'
