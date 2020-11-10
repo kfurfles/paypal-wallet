@@ -1,0 +1,10 @@
+export const COLOR_PRIMARY = '#0070BA';
+export const COLOR_PRIMARY_SHADE = '#005EA6';
+export const COLOR_PRIMARY_DARK = '#1546A0';
+export const COLOR_GRAY = '#F5F7FA';
+export const COLOR_WHITE = '#FFFFFF';
+export const COLOR_BLACK = '#243656';
+export const COLOR_BACKGROUND_GRADIENT = 'radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(51,118,202,1) 43%, rgba(42,104,190,1) 60%, rgba(21,70,160,1) 100%)';
+export const COLOR_BLACK_W_50_OPACITY = '#929BAB';
+export const COLOR_GREEN  = '#37D39B';
+export const COLOR_RED = '#F47090';
