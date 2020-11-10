@@ -56,9 +56,17 @@ export const LabelItem = styled.label`
     }
 `
 
-export const InputBox = styled.div`
+interface IInputBox {
+    active: boolean
+}
+export const InputBox = styled.div<IInputBox>`
     position: relative;
-    margin-top: 20px;
+    margin-top: ${props => props.active ? '20px' : '0px'};
+    max-height: ${props => props.active ? '100px' : '0px'};
+    opacity: ${props => props.active ? 1 : 0 };
+    visibility: ${props => props.active ? 'visible' : 'hidden' };
+    transition: 0.5s ease-in-out all;
+    overflow: hidden;
 
     svg {
         position: absolute;

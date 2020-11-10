@@ -24,13 +24,6 @@ const Activitys = () => {
     const [searchValue, setSearchValue] = useState('');
     const [activityType,setActivityType] = useState('all');
 
-    const renderSearchBox = searchBox 
-        ? (<InputBox>
-            <SearchIcon />
-            <InputSearch value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder="qual atividade ?" />
-          </InputBox>)
-        : ''
-
     const searchBoxToggle = () => {
         setSearchBox(!searchBox)
     }
@@ -52,7 +45,10 @@ const Activitys = () => {
                 }
             />
 
-            { renderSearchBox }
+            <InputBox active={searchBox}>
+                <SearchIcon />
+                <InputSearch value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder="qual atividade ?" />
+            </InputBox>
 
             <RadioGroup>
                 <RadioItem checked={"all" === activityType} onChange={e => {setActivityTypeInput("all")}} name="activity" id="all" value="all" type="radio"></RadioItem>
