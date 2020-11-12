@@ -105,4 +105,5 @@ export const ActivityAmount = styled.div<IActivityItem>`
     font-size:13px;
     font-weight:bold;
     color: ${props => props.valueType === 'income' ? COLOR.GREEN : COLOR.RED };
+    white-space: nowrap
 `

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
     Container, 
     IconButton, 
@@ -15,14 +15,18 @@ import Topbar from '../../components/Topbar'
 import { ReactComponent as BackIcon } from '../../assets/svg/back-icon.svg'
 import { ReactComponent as SearchIcon } from '../../assets/svg/search-icon.svg'
 
-
 import { ReactComponent as GoogleDriveIcon } from '../../assets/svg/google-drive-icon.svg'
+import ActivityList from '../../components/ActivityList';
+
+import { getActivitys } from './service'
 
 const Activitys = () => {
 
     const [searchBox, setSearchBox] = useState(false); 
     const [searchValue, setSearchValue] = useState('');
     const [activityType,setActivityType] = useState('all');
+    const [activityList,setActivityList] = useState<any>([]);
+
 
     const searchBoxToggle = () => {
         setSearchBox(!searchBox)
@@ -32,6 +36,25 @@ const Activitys = () => {
         setActivityType(value)
         setSearchBox(false)
     }
+    
+    useEffect(() => {
+        const list = getActivitys.map(el => {
+            const activityType: 'income' | 'outcome' = el.activityType === 'income' ? 'income' : 'outcome' 
+
+            return {
+                title: `${el.company}`,
+                grayBackground: true,  
+                subTitle: el.registered,
+                info: <ActivityAmount valueType={activityType}>{`${activityType === 'income' ? '+' : '-'} ${el.amount}`}</ActivityAmount>,
+                image: <GoogleDriveIcon />
+            }
+        })
+
+        setActivityList(list)
+        setActivityType('all')
+    },[])
+
+    
 
     return (
         <Container className="activity">
@@ -61,10 +84,13 @@ const Activitys = () => {
                 <LabelItem htmlFor="outcome">Outcome</LabelItem>
             </RadioGroup>
 
-            <ActivityBlock>
-                <ActivityTitle>Today</ActivityTitle>
+            <ActivityList list={activityList} title="Today"></ActivityList>    
+
+            {/* <ActivityBlock>
+                <ActivityTitle className="activity-title">Today</ActivityTitle>
 
                 <ActivityCard
+                    className="activity-card"
                     image={<GoogleDriveIcon />}
                     title="Mike Rine"
                     grayBackground={true}  
@@ -107,7 +133,7 @@ const Activitys = () => {
                     info={<ActivityAmount valueType="outcome">-200</ActivityAmount>}
                 ></ActivityCard>
                
-            </ActivityBlock>
+            </ActivityBlock> */}
 
         </Container>
     );

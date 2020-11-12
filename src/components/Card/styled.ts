@@ -39,6 +39,10 @@ export const SubTitle = styled.div`
     color: ${COLOR.BLACK};
     font-size: 12px;
     color: ${COLOR.BLACK_W_50_OPACITY};
+    max-width: min(83%, 180px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `
 
 export const LeftInfo = styled.div`
