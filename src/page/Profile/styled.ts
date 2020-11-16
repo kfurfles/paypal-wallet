@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import * as COLOR from '../../variables/colors'
 
 import BackgroundImage from '../../assets/svg/shape-profile.svg'
+import ActivityListComponent from '../../components/ActivityList';
+import ButtonComponent from '../../components/Button';
 
 export const Container = styled.div`  
 `
@@ -67,3 +69,42 @@ export const BalanceLabel = styled.div`
     font-size: 16px;
     color: ${COLOR.WHITE};
 `
+
+export const ContentContainer = styled.div`
+    padding-left: 32px;
+    padding-right: 32px;
+`
+
+export const ButtonAction = styled(ButtonComponent)`
+    display: flex;
+    flex-direction: column;
+    min-width: 107px;
+
+    svg{
+        margin-bottom: 20px
+    }
+
+    text-align: left;
+`
+
+export const SendMoneyButton = styled(ButtonAction)`
+    margin-right: 16px;
+
+    svg path{
+        fill: ${COLOR.WHITE}
+    }
+`
+
+export const ActionContainer = styled.div`
+    margin-top: 32px;
+    margin-bottom: 38px;
+    display: flex;
+`
+
+export const ActivityTitle = styled.div`
+    color: ${COLOR.BLACK};
+    font-weight: bold;
+    font-size: 16px;
+`
+
+export const ActivityList = styled(ActivityListComponent)``

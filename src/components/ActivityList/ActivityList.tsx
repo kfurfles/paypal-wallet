@@ -12,44 +12,27 @@ import { ReactComponent as GoogleDriveIcon } from '../../assets/svg/google-drive
 
 const ActivityList: React.FC<IActivityList> = (props) => {
     return(
-        <ActivityBlock>
-                <ActivityTitle className="activity-title">{ props.title }</ActivityTitle>
+        <ActivityBlock  className={props.className}>
+            <ActivityTitle className="activity-title">{ props.title }</ActivityTitle>
 
-                {props.list.map((activity) => {
-                    return (
-                    <ActivityCard
-                        image={activity.image}
-                        title={activity.title}
-                        grayBackground={activity.grayBackground}  
-                        subTitle={activity.subTitle}
-                        info={activity.info}
-                    />
-                    )
-                })}
-
-                {/* <ActivityCard
-                    image={<GoogleDriveIcon />}
-                    title="Mike Rine"
-                    grayBackground={true}  
-                    subTitle="1 minute ago"
-                    info={<ActivityAmount valueType="income">+200</ActivityAmount>}
-                ></ActivityCard> */}
+            {props.list.map((activity) => {
+                return (
+                <ActivityCard
+                    image={activity.image}
+                    title={activity.title}
+                    grayBackground={activity.grayBackground}  
+                    subTitle={activity.subTitle}
+                    info={activity.info}
+                />
+                )
+            })}
                
-            </ActivityBlock>
+        </ActivityBlock>
     )
 }
 
 ActivityList.defaultProps = {
-    list: [
-        {
-            grayBackground: false,
-            info: '',
-            subTitle: '',
-            valueType: 'income',
-            title: 'test',
-            image: ''
-        }
-    ],
+    list: [],
     title: '<no title>'
 }
 

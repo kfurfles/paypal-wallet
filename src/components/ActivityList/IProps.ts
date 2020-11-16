@@ -1,3 +1,5 @@
+import { BaseProps } from '../../interface/IBaseProps'
+
 export interface IActivityItem {
     valueType: 'income' | 'outcome';
     title: string;
@@ -7,8 +9,8 @@ export interface IActivityItem {
     image: React.ReactDOM | string
 }
 
-export interface IActivityList {
+export interface IActivityList  extends BaseProps {
     list: IActivityItem[],
-    title: string
+    title: JSX.Element | JSX.Element[] | string
 }
 

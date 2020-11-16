@@ -5,9 +5,6 @@ import {
     RadioGroup, 
     RadioItem, 
     LabelItem,
-    ActivityBlock,
-    ActivityTitle,
-    ActivityCard,
     ActivityAmount,
     InputBox,
     InputSearch } from './styled'
